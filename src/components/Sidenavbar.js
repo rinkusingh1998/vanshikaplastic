@@ -75,7 +75,7 @@ const Sidenavbar = () => {
                       </div>
                     </div>
                     {/*products sub li end */}
-                    <li><a href="Customcompounding">Custom Compounding</a></li>
+                    <li><a href="/Customcompounding">Custom Compounding</a></li>
                   </ul>
                 </div>
               </div>

@@ -145,7 +145,7 @@ const Home = () => {
             <h4>HDPE Granules</h4>
             <p> HDPE is a type of polyethylene with a high molecular weight, resulting.</p>
             <div className="product_btn_div">
-              <Link to="">View More <span className="fa fa-long-arrow-right" /></Link>
+              <Link to="hdpegranules">View More <span className="fa fa-long-arrow-right" /></Link>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ const Home = () => {
             <h4>PPCP Granules</h4>
             <p>PP is often used to make plastic bags, films, and sheets due to its flexibility and durability.</p>
             <div className="product_btn_div">
-              <Link to="">View More <span className="fa fa-long-arrow-right" /></Link>
+              <Link to="ppcpgranules">View More <span className="fa fa-long-arrow-right" /></Link>
             </div>
           </div>
         </div>
@@ -170,10 +170,10 @@ const Home = () => {
             <div className="products_img_box">
               <img src="../products/3.png" alt className="img-fluid" />
             </div>
-            <h4>Cable Grade Granules</h4>
-            <p>Cable Grade Granules refer to the small, granular particles or pellets of LLDPE.</p>
+            <h4>LLDPE Granules</h4>
+            <p>LLDPE is a type of polyethylene with a high molecular weight, resulting.</p>
             <div className="product_btn_div">
-              <Link to="">View More <span className="fa fa-long-arrow-right" /></Link>
+              <Link to="lldpegranules">View More <span className="fa fa-long-arrow-right" /></Link>
             </div>
           </div>
         </div>
