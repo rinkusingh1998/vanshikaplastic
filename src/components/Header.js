@@ -1,8 +1,10 @@
 import React from 'react';
 import './Header.css';
-import { Link } from "react-router-dom";
+import { Link, useParams } from 'react-router-dom';
 import Sidenavbar from './Sidenavbar';
+
 const Header = () => {
+  const { id } = useParams(); // Extract the ID from the URL
   return (
     <>
 
@@ -32,29 +34,29 @@ const Header = () => {
               {/* sub menu */}
               <li className="mkp-submenu"><Link className="dropdown-item" to="/hdpegranules">HDPE Granules <i className="bx bx-chevron-right" /></Link>
                 <ul className="dropdown-menu sub_menu_scrolls"> 
-                  <li><Link className="dropdown-item" to="">PE 100 SSBK Granules</Link></li>  
-                  <li><Link className="dropdown-item" to="">PE 80 SBK Granules</Link></li>  
-                  <li><Link className="dropdown-item" to="">PE 63 BK Granules</Link></li>  
-                  <li><Link className="dropdown-item" to="">BD (Blow Grade) Granules</Link></li>  
-                  <li><Link className="dropdown-item" to="">Natural Granules</Link></li>  
-                  <li><Link className="dropdown-item" to="">Milky Granules</Link></li>  
-                  <li><Link className="dropdown-item" to="">SSBL Blue Drum Granules</Link></li>  
-                  <li><Link className="dropdown-item" to="">Custom Compounded Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="HDPEGranules/PE-100-SSBK-Granules">PE 100 SSBK Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="HDPEGranules/PE-80-SBK-Granules">PE 80 SBK Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="HDPEGranules/PE-63-BK-Granules">PE 63 BK Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="HDPEGranules/BD-(Blow-Grade)-Granules">BD (Blow Grade) Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="HDPEGranules/Natural-Granules">Natural Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="HDPEGranules/Milky-Granules">Milky Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="HDPEGranules/SSBL-Blue-Drum-Granules">SSBL Blue Drum Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="HDPEGranules/Custom-Compounded-Granules">Custom Compounded Granules</Link></li>  
                 </ul>
               </li>
               {/* end submenu */}
               {/* sub menu */}
               <li className="mkp-submenu"><Link className="dropdown-item" to="/lldpegranules">LLDPE Granules <i className="bx bx-chevron-right" /></Link>
                 <ul className="dropdown-menu sub_menu_scrolls"> 
-                  <li><Link className="dropdown-item" to="">Cable Compounding N1, N2 granules</Link></li>  
+                  <li><Link className="dropdown-item" to="LLDPEGranules/Cable-Compounding-N1,-N2-granules">Cable Compounding N1, N2 granules</Link></li>  
                 </ul>
               </li>
               {/* end submenu */}
               {/* sub menu */}
               <li className="mkp-submenu"><Link className="dropdown-item" to="/ppcpgranules">PPCP Granules <i className="bx bx-chevron-right" /></Link>
                 <ul className="dropdown-menu sub_menu_scrolls"> 
-                  <li><Link className="dropdown-item" to="">Black PPCP Granules</Link></li>  
-                  <li><Link className="dropdown-item" to="">Natural PPCP Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="PPCPGranules/Black-PPCP-Granules">Black PPCP Granules</Link></li>  
+                  <li><Link className="dropdown-item" to="PPCPGranules/Natural-PPCP-Granules">Natural PPCP Granules</Link></li>  
                 </ul>
               </li>
               {/* end submenu */}

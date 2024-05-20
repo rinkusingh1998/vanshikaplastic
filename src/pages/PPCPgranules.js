@@ -39,7 +39,7 @@ const PPCPgranules = () => {
 {filteredItems.map((item, index) =>(
   <Categoryitems 
   key={item.id} // Use a unique identifier as the key
-  id={item.cateproduct_name} // Pass the id directly from the item
+  id={item.cateproduct_name.replace(/\s/g, '-')} // Pass the id directly from the item
   image={item.image}
   cateproduct_name={item.cateproduct_name}
   catepro_desc={item.catepro_desc}

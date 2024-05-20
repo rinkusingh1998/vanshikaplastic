@@ -1,92 +1,86 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Categorydata } from '../data/Categorydata';
 
 const PPCPgranulesdetails = () => {
+  const { id } = useParams(); // Get the ID from the URL
+  const product = Categorydata.find(item => item.cateproduct_name.replace(/\s/g, '-') === id);
+
+  if (!product) {
+    return <div>Product not found</div>;
+  }
+
+  // Replace spaces with hyphens in the product name
+  const productNameWithHyphens = product.cateproduct_name.replace(/\s/g, '-');
+
   return (
     <>
-        {/* pagte titile section start  */}
-        <section className="page_title_mkp_section">
+      {/* Page title section start */}
+      <section className="page_title_mkp_section">
         <div className="page_ti_overly_mkp_div">
           <div className="container">
             <div className="row">
-              {/* col start */}
-              <div className="col-xxl-12 colxl-12 col-lg-12 col-sm-12 col-12">
+              {/* Column start */}
+              <div className="col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
                 <div className="page_title_tax_mkp_main_div">
                   <div className="page_title_tax_mkp_div">
-                    <h1> Black PPCP Granules</h1>
+                    <h1>{product.cateproduct_name}</h1>
                     <ul>
                       <li><Link to="/">Home</Link></li>
-                      <li>Black PPCP Granules</li>
+                      <li>{product.cateproduct_name}</li>
                     </ul>
                   </div>
                 </div>
               </div>
-              {/* col end */}
+              {/* Column end */}
             </div>
           </div>
         </div>
       </section>
-      {/* pagte titile section end */}
+      {/* Page title section end */}
 
-{/* product details section start */}
-<section className="products_dt_section">
-    <div className="container">
-        <div className="row justify-content-center">
-            {/*  */}
+      {/* Product details section start */}
+      <section className="products_dt_section">
+        <div className="container">
+          <div className="row justify-content-center">
+            {/* Image section */}
             <div className="col-lg-4">
-                <div className="product_details_img_box">
-                    <img src="../categoriesimg/ppcpimg/1.png" alt="" />
-                </div>
+              <div className="product_details_img_box">
+                <img src={product.image} alt={product.cateproduct_name} />
+              </div>
             </div>
-            {/*  */}
+            {/* Details section */}
+            <div className="col-lg-7">
+              <div className="product_dt_table">
+                <h3>Specification</h3>
+                <table className='table table-bordered table-striped'>
+                  <tbody>
 
-             {/*  */}
-             <div className="col-lg-7">
-                <div className="product_dt_table">
-                    <h3>Specification</h3>
-                   <table className='table table-bordered table-striped'>
                     <tr>
-                        <th>Physical State</th>
-                        <td>GRANULES</td>
-                    </tr>
-                    <tr>
-                        <th>Usage/Application</th>
-                        <td>Pipes & Construction</td>
+                      <th>Category Name</th>
+                      <td>{product.categoryname}</td>
                     </tr>
 
                     <tr>
-                        <th>Type</th>
-                        <td>Polyethylene</td>
+                      <th>Product Name</th>
+                      <td>{product.cateproduct_name}</td>
                     </tr>
-
                     <tr>
-                        <th>Color</th>
-                        <td>Black</td>
-                    </tr>
-
-                    <tr>
-                        <th>Material Grade</th>
-                        <td>PE 100</td>
-                    </tr>
-
-                    <tr>
-                        <th>Material</th>
-                        <td>PE 100</td>
+                      <th>Description</th>
+                      <td>{product.catepro_desc}</td>
                     </tr>
                     
-                   </table>
-                </div>
+
+                  </tbody>
+                </table>
+              </div>
             </div>
-            {/*  */}
+          </div>
         </div>
-    </div>
-</section>
-
-{/* end */}
-
-
+      </section>
+      {/* Product details section end */}
     </>
-  )
-}
+  );
+};
 
-export default PPCPgranulesdetails
+export default PPCPgranulesdetails;
