@@ -1,8 +1,9 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link, useParams } from 'react-router-dom';
 import { Categorydata } from '../data/Categorydata';
 
 const PPCPgranules = () => {
+  const { id } = useParams(); // Extract the ID from the URL
   const filteredItems = Categorydata.filter(item => item.categoryname === 'PPCP Granules');
   return (
     <>
@@ -37,7 +38,8 @@ const PPCPgranules = () => {
 
 {filteredItems.map((item, index) =>(
   <Categoryitems 
-  key={index}
+  key={item.id} // Use a unique identifier as the key
+  id={item.cateproduct_name} // Pass the id directly from the item
   image={item.image}
   cateproduct_name={item.cateproduct_name}
   catepro_desc={item.catepro_desc}
@@ -58,6 +60,7 @@ const PPCPgranules = () => {
 export default PPCPgranules;
 
 const Categoryitems = ({
+  id,
   image,
   cateproduct_name,
   catepro_desc,
@@ -67,7 +70,7 @@ const Categoryitems = ({
     <>
     {/*  col start  */}
     <div className="col-lg-3 col-md-6 col-sm-12 col-12">
-      <Link to="">
+      <Link to={`/PPCPGranules/${id}`}>
       <div className="category_items_main_div">
         <div className="category_items_img_box">
           <img src={image} alt="" className='img-fluid' />

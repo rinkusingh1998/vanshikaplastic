@@ -14,6 +14,7 @@ import Eprservices from './pages/Eprservices';
 import Hdpegranules from './pages/Hdpegranules';
 import LLdpegranules from './pages/LLdpegranules';
 import PPCPgranules from './pages/PPCPgranules';
+import Hdpegranulesdetails from './pages/Hdpegranulesdetails';
 
 
 
@@ -28,6 +29,7 @@ function App() {
     <Route path="/Contact" Component={Contactus}/>
     <Route path="/Eprservices" Component={Eprservices}/>
     <Route path="/hdpegranules" Component={Hdpegranules}/>
+    <Route path="/hdpegranules/:id" Component={Hdpegranulesdetails}/>
     <Route path="/lldpegranules" Component={LLdpegranules}/>
     <Route path="/ppcpgranules" Component={PPCPgranules}/>
   </Routes>

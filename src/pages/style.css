@@ -1281,6 +1281,65 @@ p{
 
   /* end */
 
+  /* product details css */
+.products_dt_section{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.product_details_img_box{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product_details_img_box img{
+    text-align: center;
+    margin: auto;
+}
+
+
+.product_dt_table{
+    overflow-x: auto;
+}
+
+.product_dt_table h3{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    padding-bottom: 2px;
+}
+
+.product_dt_table table{
+    border: 1px solid var(--gray-color2);
+}
+
+.product_dt_table table tr:nth-child(even) {
+    background-color: var(--background-color);
+  }
+
+.product_dt_table table tr td, th{
+    padding: 7px 8px;
+    border: 1px solid var(--gray-color);
+}
+
+.product_dt_table tr th{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--black-color2);
+}
+
+
+.product_dt_table tr td{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--black-color4);
+    font-weight: 600;
+}
+
+
+  /* end */
+
 
   /* =================segement css */
 

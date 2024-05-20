@@ -1,88 +1,86 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { Categorydata } from '../data/Categorydata';
 
 const Hdpegranules = () => {
-  
+  const { id } = useParams(); // Extract the ID from the URL
+
   const filteredItems = Categorydata.filter(item => item.categoryname === 'HDPE Granules');
   return (
     <>
-  {/* pagte titile section start  */}
-  <section className="page_title_mkp_section">
-    <div className="page_ti_overly_mkp_div">
-      <div className="container">
-        <div className="row">
-          {/* col start */}
-          <div className="col-xxl-12 colxl-12 col-lg-12 col-sm-12 col-12">
-            <div className="page_title_tax_mkp_main_div">
-              <div className="page_title_tax_mkp_div">
-                <h1> HDPE Granules</h1>
-                <ul>
-                  <li><Link to="/">Home</Link></li>
-                  <li>HDPE Granules</li>
-                </ul>
+      {/* pagte titile section start  */}
+      <section className="page_title_mkp_section">
+        <div className="page_ti_overly_mkp_div">
+          <div className="container">
+            <div className="row">
+              {/* col start */}
+              <div className="col-xxl-12 colxl-12 col-lg-12 col-sm-12 col-12">
+                <div className="page_title_tax_mkp_main_div">
+                  <div className="page_title_tax_mkp_div">
+                    <h1> HDPE Granules</h1>
+                    <ul>
+                      <li><Link to="/">Home</Link></li>
+                      <li>HDPE Granules</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
+              {/* col end */}
             </div>
           </div>
-          {/* col end */}
         </div>
-      </div>
-    </div>
-  </section>
-  {/* pagte titile section end */}
+      </section>
+      {/* pagte titile section end */}
 
-  {/* category page section start */}
-  <section className="category_page_section">
-    <div className="container">
-        <div className="row">
-
-{filteredItems.map((item, index) =>(
-  <Categoryitems 
-  key={index}
-  image={item.image}
-  cateproduct_name={item.cateproduct_name}
-  catepro_desc={item.catepro_desc}
-  catebtn_view={item.catebtn_view}
-  />
-))}
-
-           
+      {/* category page section start */}
+      <section className="category_page_section">
+        <div className="container">
+          <div className="row">
+            {filteredItems.map((item) => (
+              <Categoryitems
+              key={item.id} // Use a unique identifier as the key
+              id={item.cateproduct_name} // Pass the id directly from the item
+              image={item.image}
+              cateproduct_name={item.cateproduct_name}
+              catepro_desc={item.catepro_desc}
+              catebtn_view={item.catebtn_view}
+              />
+            ))}
+          </div>
         </div>
-    </div>
-  </section>
-  {/* category page section end */}
-      
+      </section>
+      {/* category page section end */}
     </>
-  )
-}
+  );
+};
 
 export default Hdpegranules;
 
 const Categoryitems = ({
+  id,
   image,
   cateproduct_name,
   catepro_desc,
   catebtn_view
-}) =>{
-  return(
+}) => {
+  return (
     <>
-    {/*  col start  */}
-    <div className="col-lg-3 col-md-6 col-sm-12 col-12">
-      <Link to="">
-      <div className="category_items_main_div">
-        <div className="category_items_img_box">
-          <img src={image} alt="" className='img-fluid' />
-        </div>
-        <h3>{cateproduct_name}</h3>
-        <p>{catepro_desc}</p>
-        <div className="categoryitem_btn_div">
+      {/*  col start  */}
+      <div className="col-lg-3 col-md-6 col-sm-12 col-12">
+        <Link to={`/HDPEGranules/${id}`}> {/* Link to the product page with its ID */}
+          <div className="category_items_main_div">
+            <div className="category_items_img_box">
+              <img src={image} alt="" className='img-fluid' />
+            </div>
+            <h3>{cateproduct_name}</h3>
+            <p>{catepro_desc}</p>
+            <div className="categoryitem_btn_div">
               <p>{catebtn_view} <span className="fa fa-long-arrow-right" /></p>
             </div>
+          </div>
+        </Link>
       </div>
-      </Link>
-    </div>
-
-    {/*  col end */}
+      {/*  col end */}
     </>
-  )
-}
+  );
+};
