@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 col-12">
             <div className="footer_about_div" data-aos="fade-down" data-aos-duration={800} data-aos-offset={0}>
               <div className="footer_logo_div">
-                <Link to="index.php"><img src="../logo/logo.png" alt className="img-fluid" /></Link>
+                <Link to="/"><img src="../logo/logo.png" alt className="img-fluid" /></Link>
               </div>
 
               <div className="footer_img">
@@ -56,10 +56,10 @@ const Footer = () => {
             <div className="footer_headti" data-aos="fade-down" data-aos-duration={1200} data-aos-offset={0}>
               <h5> Products</h5>
               <ul>
-                <li><Link to="">PE 100 SSBK Granules</Link></li>  
-                <li><Link to="">PE 80 SBK Granules</Link></li>  
-                <li><Link to="">PE 63 BK Granules</Link></li>  
-                <li><Link to="">BD (Blow Grade) Granules</Link></li>  
+                <li><Link to="HDPEGranules/PE-100-SSBK-Granules">PE 100 SSBK Granules</Link></li>  
+                <li><Link to="HDPEGranules/PE-80-SBK-Granules">PE 80 SBK Granules</Link></li>  
+                <li><Link to="HDPEGranules/PE-63-BK-Granules">PE 63 BK Granules</Link></li>  
+                <li><Link to="HDPEGranules/BD-(Blow-Grade)-Granules">BD (Blow Grade) Granules</Link></li>  
                 {/* <li><Link to="">Natural Granules</Link></li>   */}
               </ul>
             </div>
@@ -144,7 +144,7 @@ const Footer = () => {
       <div className="row">
         {/* col start  */}
         <div className="col-lg-12 col-md-12 col-sm-12 col-12">
-          <p>Copyright © 2023 Vanshika Plastic Industry. All Right Reserved.</p>
+          <p>Copyright © 2024 Vanshika Plastic Industry. All Right Reserved.</p>
         </div>
         {/* col end */}
       </div>

@@ -1338,6 +1338,15 @@ p{
 }
 
 
+.prodt_enqyury_btn a{
+    background-color: var(--black-color4);
+   padding: 10px 20px 10px 20px !important;
+color: var(--white-color);
+border-radius: 100px;
+font-size: 14px;
+text-transform: capitalize;
+}
+
   /* end */
 
 

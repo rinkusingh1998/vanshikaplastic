@@ -1,18 +1,8 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { Categorydata } from '../data/Categorydata';
+import { Link } from 'react-router-dom';
 
-const Hdpegranulesdetails = () => {
-  const { id } = useParams(); // Get the ID from the URL
-  const product = Categorydata.find(item => item.cateproduct_name.replace(/\s/g, '-') === id);
-
-  if (!product) {
-    return <div>Product not found</div>;
-  }
-
-  // Replace spaces with hyphens in the product name
-  const productNameWithHyphens = product.cateproduct_name.replace(/\s/g, '-');
-
+const Customcompounding = () => {
+  
   return (
     <>
       {/* Page title section start */}
@@ -24,10 +14,10 @@ const Hdpegranulesdetails = () => {
               <div className="col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
                 <div className="page_title_tax_mkp_main_div">
                   <div className="page_title_tax_mkp_div">
-                    <h1>{product.cateproduct_name}</h1>
+                    <h1>Custom Compounding</h1>
                     <ul>
                       <li><Link to="/">Home</Link></li>
-                      <li>{product.cateproduct_name}</li>
+                      <li>Custom Compounding</li>
                     </ul>
                   </div>
                 </div>
@@ -46,7 +36,7 @@ const Hdpegranulesdetails = () => {
             {/* Image section */}
             <div className="col-lg-4">
               <div className="product_details_img_box">
-                <img src={product.image} alt={product.cateproduct_name} />
+                <img src="../categoriesimg/hdpeimg/8.png"/>
               </div>
             </div>
             {/* Details section */}
@@ -57,19 +47,16 @@ const Hdpegranulesdetails = () => {
                   <tbody>
 
                     <tr>
-                      <th>Category Name</th>
-                      <td>{product.categoryname}</td>
+                      <th>Product Name</th>
+                     <td>Custom Compounding</td>
                     </tr>
 
                     <tr>
-                      <th>Product Name</th>
-                      <td>{product.cateproduct_name}</td>
+                        <th>Description</th>
+                        <td>PE 100: This Likely Stands For Polyethylene (PE) 100...</td>
                     </tr>
-                    <tr>
-                      <th>Description</th>
-                      <td>{product.catepro_desc}</td>
-                    </tr>
-                    
+
+                  
 
                   </tbody>
                 </table>
@@ -89,4 +76,4 @@ const Hdpegranulesdetails = () => {
   );
 };
 
-export default Hdpegranulesdetails;
+export default Customcompounding;

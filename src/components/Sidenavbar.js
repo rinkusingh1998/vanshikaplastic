@@ -37,14 +37,14 @@ const Sidenavbar = () => {
                     <div className="collapse" id="prosub_menu">
                       <div className="card card-body prodct_submenu_cardbody">
                         <ul className="product_submenu_ul">
-                          <li><a href="">PE 100 SSBK Granules</a></li>
-                          <li><a href="">PE 80 SBK Granules</a></li>
-                          <li><a href="">PE 63 BK Granules</a></li>
-                          <li><a href="">BD (Blow Grade) Granules</a></li>
-                          <li><a href="">Natural Granules</a></li>
-                          <li><a href="">Milky Granules</a></li>
-                          <li><a href="">SSBL Blue Drum Granules</a></li>
-                          <li><a href="">Custom Compounded Granules</a></li>
+                          <li><a href="HDPEGranules/PE-100-SSBK-Granules">PE 100 SSBK Granules</a></li>
+                          <li><a href="HDPEGranules/PE-80-SBK-Granules">PE 80 SBK Granules</a></li>
+                          <li><a href="HDPEGranules/PE-63-BK-Granules">PE 63 BK Granules</a></li>
+                          <li><a href="HDPEGranules/BD-(Blow-Grade)-Granules">BD (Blow Grade) Granules</a></li>
+                          <li><a href="HDPEGranules/Natural-Granules">Natural Granules</a></li>
+                          <li><a href="HDPEGranules/Milky-Granules">Milky Granules</a></li>
+                          <li><a href="HDPEGranules/SSBL-Blue-Drum-Granules">SSBL Blue Drum Granules</a></li>
+                          <li><a href="HDPEGranules/Custom-Compounded-Granules">Custom Compounded Granules</a></li>
                         </ul>
                       </div>
                     </div>
@@ -57,7 +57,7 @@ const Sidenavbar = () => {
                     <div className="collapse" id="prosub_menu2">
                       <div className="card card-body prodct_submenu_cardbody">
                         <ul className="product_submenu_ul">
-                          <li><a href="">Cable Compounding N1, N2 granules</a></li>
+                          <li><a href="LLDPEGranules/Cable-Compounding-N1,-N2-granules">Cable Compounding N1, N2 granules</a></li>
                         </ul>
                       </div>
                     </div>
@@ -69,13 +69,13 @@ const Sidenavbar = () => {
                     <div className="collapse" id="prosub_menu3">
                       <div className="card card-body prodct_submenu_cardbody">
                         <ul className="product_submenu_ul">
-                          <li><a href=""> Black PPCP Granule</a></li>
-                          <li><a href="">Natural PPCP Granule</a></li>
+                          <li><a href="PPCPGranules/Black-PPCP-Granules"> Black PPCP Granule</a></li>
+                          <li><a href="PPCPGranules/Natural-PPCP-Granules">Natural PPCP Granule</a></li>
                         </ul>
                       </div>
                     </div>
                     {/*products sub li end */}
-                    <li><a href="">Custom Compounding</a></li>
+                    <li><a href="Customcompounding">Custom Compounding</a></li>
                   </ul>
                 </div>
               </div>

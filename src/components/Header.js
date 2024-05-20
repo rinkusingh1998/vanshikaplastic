@@ -60,7 +60,7 @@ const Header = () => {
                 </ul>
               </li>
               {/* end submenu */}
-              <li><Link className="dropdown-item" to="">Custom Compounding</Link></li>
+              <li><Link className="dropdown-item" to="Customcompounding">Custom Compounding</Link></li>
             </ul>
           </li>
           {/* dropdwon menu end*/}

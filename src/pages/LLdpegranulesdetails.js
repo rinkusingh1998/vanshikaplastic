@@ -74,6 +74,10 @@ const LLdpegranulesdetails = () => {
                   </tbody>
                 </table>
               </div>
+                       
+<div className="prodt_enqyury_btn">
+    <a href="/Contact">Enquiry Now</a>
+</div>
             </div>
           </div>
         </div>

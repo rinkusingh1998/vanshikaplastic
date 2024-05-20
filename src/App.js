@@ -17,6 +17,7 @@ import PPCPgranules from './pages/PPCPgranules';
 import Hdpegranulesdetails from './pages/Hdpegranulesdetails';
 import LLdpegranulesdetails from './pages/LLdpegranulesdetails';
 import PPCPgranulesdetails from './pages/PPCPgranulesdetails';
+import Customcompounding from './pages/Customcompounding';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
     <Route path="/lldpegranules/:id" Component={LLdpegranulesdetails}/>
     <Route path="/ppcpgranules" Component={PPCPgranules}/>
     <Route path="/ppcpgranules/:id" Component={PPCPgranulesdetails}/>
+    <Route path="/Customcompounding" Component={Customcompounding}/>
   </Routes>
   <Footer/>
   <ScrollToTop/>
