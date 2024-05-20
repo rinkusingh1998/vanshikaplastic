@@ -15,8 +15,8 @@ import Hdpegranules from './pages/Hdpegranules';
 import LLdpegranules from './pages/LLdpegranules';
 import PPCPgranules from './pages/PPCPgranules';
 import Hdpegranulesdetails from './pages/Hdpegranulesdetails';
-
-
+import LLdpegranulesdetails from './pages/LLdpegranulesdetails';
+import PPCPgranulesdetails from './pages/PPCPgranulesdetails';
 
 function App() {
   return (
@@ -31,7 +31,9 @@ function App() {
     <Route path="/hdpegranules" Component={Hdpegranules}/>
     <Route path="/hdpegranules/:id" Component={Hdpegranulesdetails}/>
     <Route path="/lldpegranules" Component={LLdpegranules}/>
+    <Route path="/lldpegranules/:id" Component={LLdpegranulesdetails}/>
     <Route path="/ppcpgranules" Component={PPCPgranules}/>
+    <Route path="/ppcpgranules/:id" Component={PPCPgranulesdetails}/>
   </Routes>
   <Footer/>
   <ScrollToTop/>
